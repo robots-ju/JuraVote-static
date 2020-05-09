@@ -25,6 +25,19 @@ h1, h2, h3, h4, h5, a {
     font-family: 'Roboto', sans-serif !important;
 }
 
+
+.uk-link, a {
+    color: #D20603;
+    text-decoration: none;
+}
+
+.uk-link, a:hover {
+     color: #990000;
+    text-decoration: none;
+ }
+
+
+
 #navbar-iframe {
     display: block;
     width: 100%;
@@ -110,4 +123,9 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
 .uk-offcanvas-bar .uk-nav-default > li > a,
 .uk-offcanvas-bar .uk-nav-default > li > a:hover {
     color: white;
+}
+
+.illustration {
+    height: 150px;
+    width: auto;
 }

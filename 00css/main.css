@@ -25,6 +25,19 @@ h1, h2, h3, h4, h5, a {
     font-family: 'Roboto', sans-serif !important;
 }
 
+
+.uk-link, a {
+    color: #D20603;
+    text-decoration: none;
+}
+
+.uk-link, a:hover {
+     color: #990000;
+    text-decoration: none;
+ }
+
+
+
 #navbar-iframe {
     display: block;
     width: 100%;

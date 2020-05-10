@@ -2,19 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../img/Logo/JuraVote/Logo.png" /> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="shortcut icon" href="../../img/Logo/JuraVote/Logo.png" /> <!-- Mettre le bon chemin vers le fichier -->
     <title>JuraVote | Votation cantonale du 20.10.2019</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
-    <link rel="stylesheet" href="../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
-    <script src="../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
-    <script src="../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
-    <link rel="stylesheet" href="../00css/main.css">
+    <link rel="stylesheet" href="../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../00css/main.css">
     <link rel="stylesheet" href="../resultats.css">
-    <script src="vcantonales.js"></script>
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
     
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
@@ -24,7 +23,7 @@
 <!-- Barre de navigation -->
 <header>
     <div class="navbar-normal">
-        <iframe src="../01Navigation/navbar.html?active=Resultats" id="navbar-iframe"></iframe>
+        <iframe src="../../01Navigation/navbar.html?active=Resultats" id="navbar-iframe"></iframe>
     </div>
     <nav class="uk-navbar uk-navbar-container navbar-mobile">
         <div class="uk-navbar-left">
@@ -38,30 +37,30 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
             <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
                 <li id="Accueil">
-                    <a class="uk-button uk-button-text" href="../index.html">Accueil</a></li>
+                    <a class="uk-button uk-button-text" href="../../index.html">Accueil</a></li>
                 <li id="Actualites">
-                    <a class="uk-button uk-button-text" href="../02Actualites/actualites.html">Actualités</a></li>
+                    <a class="uk-button uk-button-text" href="../../02Actualites/actualites.html">Actualités</a></li>
                 <li id="Votations">
-                    <a class="uk-button uk-button-text" href="../03Votations/accueilV.html">Prochaines votations</a>
+                    <a class="uk-button uk-button-text" href="../../03Votations/accueilV.html">Prochaines votations</a>
                 </li>
                 <li id="Elections">
-                    <a class="uk-button uk-button-text" href="../04Elections/accueilE.html">Prochaines élections</a>
+                    <a class="uk-button uk-button-text" href="../../04Elections/accueilE.html">Prochaines élections</a>
                 </li>
                 <li id="Resultats">
-                    <a class="uk-button uk-button-text" href="../05Resultats/resultats.html">Derniers résultats</a></li>
+                    <a class="uk-button uk-button-text" href="../../05Resultats/resultats.html">Derniers résultats</a></li>
                 <li id="Presentations">
-                    <a class="uk-button uk-button-text" href="../06Presentations/accueilP.html">Partis politiques</a>
+                    <a class="uk-button uk-button-text" href="../../06Presentations/accueilP.html">Partis politiques</a>
                 </li>
                 <li id="Instances">
-                    <a class="uk-button uk-button-text" href="../07Instances/accueilI.html">Instances politiques</a>
+                    <a class="uk-button uk-button-text" href="../../07Instances/accueilI.html">Instances politiques</a>
                 </li>
                 <li id="fonctionnement">
-                    <a class="uk-button uk-button-text" href="../09Fonctionnement/fonctionnement.html">La politique en
+                    <a class="uk-button uk-button-text" href="../../09Fonctionnement/fonctionnement.html">La politique en
                         Suisse</a></li>
                 <li id="archives">
-                    <a class="uk-button uk-button-text" href="../10Archives/Archives.html">Archives</a></li>
+                    <a class="uk-button uk-button-text" href="../../10Archives/Archives.html">Archives</a></li>
                     <li id="equipe">
-                        <a class="uk-button uk-button-text" href="../11Equipe/equipe.html">L'équipe</a></li>
+                        <a class="uk-button uk-button-text" href="../../11Equipe/equipe.html">L'équipe</a></li>
                 <li><a class="uk-button uk-button-tex" href="https://twitter.com/JuraVote/" target="_blank"
                        uk-icon="icon: twitter; ratio: 1.2"></a></li>
                 <li><a class="uk-button uk-button-tex" href="https://www.instagram.com/juravote/?hl=fr" target="_blank"
@@ -85,7 +84,7 @@
                                     <h2>Informations de la votation</h2>
                                 </div>
                             </div>
-                            <div class="uk-card-body">
+                            <div class="uk-card-body uk-text-left">
                             <p><b>Objet : </b>Acceptez-vous la modification de la loi d'impôt (report de la baisse fiscale) ?</p>
                             <p><b>Participation : </b>41.80 %</p>
                             <p><b>Résultat : </b>Refusé</p>
@@ -150,12 +149,12 @@
                                     <h2>Analyse du résultat</h2>
                                 </div>
                             </div>
-                            <div class="uk-card-body">
+                            <div class="uk-card-body uk-text-left">
                             <p>En novembre 2018, le Parlement jurassien a accepté le report de la baisse d'impôt prévue en 2019
                                 à l'année 2023, une diminution de 1%, conformément à ce qui avait été voté en 2004.</p>
-                            <p>A la suite de cette décision, l'UDC a pris la décision de lancer un référendum pour appliquer cette
+                            <p>A la suite de cette décision, l'UDC a lancé un référendum pour appliquer cette
                                 baisse d'impôt. Soutenu par le PLR, pourtant partagé sur la question, l'UDC a réussi à récolter  3'600
-                                signatures nécessaires pour l'aboutissement du référendum.</p>
+                                signatures nécessaires à l'aboutissement du référendum.</p>
                             <p>A l'inverse, le Gouvernement jurassien, soutenu par l'Association jurassienne des communes, ainsi que
                                 le PDC, les Verts, le PCSI et le PS, craignait pour les finances cantonales (manque à gagner de 4.3
                                 millions de francs avec pour conséquence une réduction de prestations ou une augmentation de taxes.</p>
@@ -174,9 +173,9 @@
                                 </div>
                             </div>
                             
-                            <div id="chartdiv2" style="width: 100%; height: 350px; padding-top: 5%"></div>
+                            <div id="chartdiv3" style="width: 100%; height: 350px; padding-top: 5%"></div>
                                 <script>
-                                    var cantonJU = am4core.create("chartdiv2", am4maps.MapChart);
+                                    var cantonJU = am4core.create("chartdiv3", am4maps.MapChart);
                                     cantonJU.geodata = am4geodata_switzerlandHigh;
                                     cantonJU.projection = new am4maps.projections.Miller();
                                     var polygonSeries = cantonJU.series.push(new am4maps.MapPolygonSeries());
@@ -193,6 +192,7 @@
                                     delemont.include = ["CH-JU"]
                                     delemont.mapPolygons.template.tooltipText = "{Votes}";
                                     delemont.mapPolygons.template.fill = am4core.color("#ff0000");
+                                    
                                 </script>
                             </div>
                     </div>

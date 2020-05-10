@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../img/Logo/JuraVote.png" /> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="shortcut icon" href="../img/Logo/JuraVote/Logo.png" /> <!-- Mettre le bon chemin vers le fichier -->
     <title>JuraVote | Votation cantonale du 20.10.2019</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
@@ -11,6 +11,13 @@
     <script src="../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
     <link rel="stylesheet" href="../00css/main.css">
     <link rel="stylesheet" href="../resultats.css">
+    <script src="vcantonales.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
+    
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <!-- Mettre les styles CSS personnalisés -->
 </head>
 <body>
@@ -69,9 +76,128 @@
     <section style="padding: 2%">
         <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation cantonale du 20 octobre 2019</h1>
         <hr>
-        <section>
-            <p class="uk-text-lead uk-text-center">Objet soumis à votation : <b>Acceptez-vous la modification de la loi d'impôt (report de la baisse fiscale) ?</b></p>
-            <canvas id="canvas-holder" width="400" height="400"></canvas>
+        <section style="padding: 2%;">
+            <div class="uk-child-width-1-2@m uk-child-width-1-1@s uk-grid-small uk-grid-match" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-column" uk-grid>
+                                    <h2>Informations de la votation</h2>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                            <p><b>Objet : </b>Acceptez-vous la modification de la loi d'impôt (report de la baisse fiscale) ?</p>
+                            <p><b>Participation : </b>41.80 %</p>
+                            <p><b>Résultat : </b>Refusé</p>
+                            <p><b>Type de la votation : </b>Votation cantonale jurassienne</p>
+                            <p><b>Mode de votation : </b>Référendum</p>
+                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-column" uk-grid>
+                                    <h2>Résultats cantonaux</h2>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                                <div id="chartdiv1" style="width: 100%; height: 250px;"></div>
+                                    <script>
+                                        // Create chart instance
+                                        var resultatVC = am4core.create("chartdiv1", am4charts.PieChart);
+
+                                        // Add data
+                                        resultatVC.data = [{
+                                        "votes": "OUI",
+                                        "suffrages": 9630
+                                        }, {
+                                        "votes": "NON",
+                                        "suffrages": 12854
+                                        }];
+
+                                        // Add and configure Series
+                                        var dataVC = resultatVC.series.push(new am4charts.PieSeries());
+                                        dataVC.dataFields.value = "suffrages";
+                                        dataVC.dataFields.category = "votes";
+
+                                        // Let's cut a hole in our Pie chart the size of 40% the radius
+                                        resultatVC.innerRadius = am4core.percent(40);
+
+                                        // Disable ticks and labels
+                                        dataVC.labels.template.disabled = true;
+                                        dataVC.ticks.template.disabled = true;
+
+                                        // Disable tooltips
+                                        dataVC.slices.template.tooltipText = "";
+
+                                        // Add a legend
+                                        resultatVC.legend = new am4charts.Legend();
+                                        resultatVC.legend.position ="right";
+
+                                        dataVC.colors.list = [
+                                        am4core.color("#46ff00"),
+                                        am4core.color("#ff0000"),
+                                        ]
+                                    </script>
+                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-column" uk-grid>
+                                    <h2>Analyse du résultat</h2>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                            <p>En novembre 2018, le Parlement jurassien a accepté le report de la baisse d'impôt prévue en 2019
+                                à l'année 2023, une diminution de 1%, conformément à ce qui avait été voté en 2004.</p>
+                            <p>A la suite de cette décision, l'UDC a pris la décision de lancer un référendum pour appliquer cette
+                                baisse d'impôt. Soutenu par le PLR, pourtant partagé sur la question, l'UDC a réussi à récolter  3'600
+                                signatures nécessaires pour l'aboutissement du référendum.</p>
+                            <p>A l'inverse, le Gouvernement jurassien, soutenu par l'Association jurassienne des communes, ainsi que
+                                le PDC, les Verts, le PCSI et le PS, craignait pour les finances cantonales (manque à gagner de 4.3
+                                millions de francs avec pour conséquence une réduction de prestations ou une augmentation de taxes.</p>
+                            <p>Pour conclure, le référendum a finalement été accepté par le peuple jurassien à plus de 57 %.
+                                Les districts de Delémont (58 %) et de Porrentruy (59 %) ont refusé le texte, à l'instar des
+                                Franches-Montagnes qui l'ont accepté à 51 %.</p>    
+                        
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-column" uk-grid>
+                                    <h2>Résultats détaillés</h2>
+                                </div>
+                            </div>
+                            
+                            <div id="chartdiv2" style="width: 100%; height: 350px; padding-top: 5%"></div>
+                                <script>
+                                    var cantonJU = am4core.create("chartdiv2", am4maps.MapChart);
+                                    cantonJU.geodata = am4geodata_switzerlandHigh;
+                                    cantonJU.projection = new am4maps.projections.Miller();
+                                    var polygonSeries = cantonJU.series.push(new am4maps.MapPolygonSeries());
+                                    polygonSeries.useGeodata = true;
+                                    polygonSeries.mapPolygons.template.events.on("hit", function(ev) {
+                                    cantonJU.zoomToMapObject(evtarget);
+                                    });
+                                    var label = cantonJU.chartContainer.createChild(am4core.Label);   
+                                    polygonSeries.include = ["CH-JU"];
+
+                                    var delemont = cantonJU.series.push(new am4maps.MapPolygonSeries());
+                                    delemont.name = "votesDEL";
+                                    delemont.useGeodata = true;
+                                    delemont.include = ["CH-JU"]
+                                    delemont.mapPolygons.template.tooltipText = "{Votes}";
+                                    delemont.mapPolygons.template.fill = am4core.color("#ff0000");
+                                </script>
+                            </div>
+                    </div>
+                </div>
+            </div> 
         </section>
     </section>
 </main>

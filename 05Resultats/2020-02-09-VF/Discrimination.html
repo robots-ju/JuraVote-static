@@ -2,21 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../img/Logo/JuraVote.png" /> <!-- Mettre le bon chemin vers le fichier -->
-    <title>JuraVote | XXXX</title>
+    <link rel="shortcut icon" href="../../img/Logo/JuraVote.png" /> <!-- Mettre le bon chemin vers le fichier -->
+    <title>JuraVote | Votation 09.02.2020</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
-    <link rel="stylesheet" href="../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
-    <script src="../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
-    <script src="../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
-    <link rel="stylesheet" href="../00css/main.css">
+    <link rel="stylesheet" href="../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../00css/main.css">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
     <!-- Mettre les styles CSS personnalisés -->
 </head>
 <body>
 <!-- Barre de navigation -->
 <header>
     <div class="navbar-normal">
-        <iframe src="01Navigation/navbar.html?active=Accueil" id="navbar-iframe"></iframe>
+        <iframe src="../../01Navigation/navbar.html?active=Resultats" id="navbar-iframe"></iframe>
     </div>
     <nav class="uk-navbar uk-navbar-container navbar-mobile">
         <div class="uk-navbar-left">
@@ -30,28 +34,28 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
             <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
                 <li id="Accueil">
-                    <a class="uk-button uk-button-text" href="../index.html">Accueil</a></li>
+                    <a class="uk-button uk-button-text" href="../../index.html">Accueil</a></li>
                 <li id="Actualites">
-                    <a class="uk-button uk-button-text" href="../02Actualites/actualites.html">Actualités</a></li>
+                    <a class="uk-button uk-button-text" href="../../02Actualites/actualites.html">Actualités</a></li>
                 <li id="Votations">
-                    <a class="uk-button uk-button-text" href="../03Votations/accueilV.html">Prochaines votations</a>
+                    <a class="uk-button uk-button-text" href="../../03Votations/accueilV.html">Prochaines votations</a>
                 </li>
                 <li id="Elections">
-                    <a class="uk-button uk-button-text" href="../04Elections/accueilE.html">Prochaines élections</a>
+                    <a class="uk-button uk-button-text" href="../../04Elections/accueilE.html">Prochaines élections</a>
                 </li>
                 <li id="Resultats">
-                    <a class="uk-button uk-button-text" href="../05Resultats/resultats.html">Derniers résultats</a></li>
+                    <a class="uk-button uk-button-text" href="../../05Resultats/resultats.html">Derniers résultats</a></li>
                 <li id="Presentations">
-                    <a class="uk-button uk-button-text" href="../06Presentations/accueilP.html">Partis politiques</a>
+                    <a class="uk-button uk-button-text" href="../../06Presentations/accueilP.html">Partis politiques</a>
                 </li>
                 <li id="Instances">
-                    <a class="uk-button uk-button-text" href="../07Instances/accueilI.html">Instances politiques</a>
+                    <a class="uk-button uk-button-text" href="../../07Instances/accueilI.html">Instances politiques</a>
                 </li>
                 <li id="fonctionnement">
-                    <a class="uk-button uk-button-text" href="../09Fonctionnement/fonctionnement.html">La politique en
+                    <a class="uk-button uk-button-text" href="../../09Fonctionnement/fonctionnement.html">La politique en
                         Suisse</a></li>
                 <li id="archives">
-                    <a class="uk-button uk-button-text" href="../10Archives/Archives.html">Archives</a></li>
+                    <a class="uk-button uk-button-text" href="../../10Archives/Archives.html">Archives</a></li>
                     <li id="equipe">
                         <a class="uk-button uk-button-text" href="../../11Equipe/equipe.html">L'équipe</a></li>
                 <li><a class="uk-button uk-button-tex" href="https://twitter.com/JuraVote/" target="_blank"

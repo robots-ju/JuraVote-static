@@ -15,7 +15,7 @@
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
-    <script src="https://github.com/robots-ju/JuraVote-static/blob/developpement/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET2.json"></script>
+    <script src="test.js"></script>
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <!-- Mettre les styles CSS personnalisés -->
 </head>
@@ -180,7 +180,7 @@
                     <div id="chartdiv3" style="width: 100%; height: 350px; padding-top: 5%"></div>
                     <script>
                         var cantonJU = am4core.create("chartdiv3", am4maps.MapChart);
-                        cantonJU.geodata = swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET2.json;
+                        cantonJU.geodata = test;
                         cantonJU.projection = new am4maps.projections.Miller();
                         var polygonSeries = cantonJU.series.push(new am4maps.MapPolygonSeries());
                         polygonSeries.useGeodata = true;
@@ -190,13 +190,232 @@
                         var label = cantonJU.chartContainer.createChild(am4core.Label);
                         polygonSeries.include = ["CH-JU"];
 
-                        var delemont = cantonJU.series.push(new am4maps.MapPolygonSeries());
-                        delemont.name = "votesDEL";
-                        delemont.useGeodata = true;
-                        delemont.include = ["CH-JU"]
-                        delemont.mapPolygons.template.tooltipText = "{Votes}";
-                        delemont.mapPolygons.template.fill = am4core.color("#ff0000");
+                        var imageSeries = cantonJU.series.push(new am4maps.MapImageSeries());
+                        var imageSeriesTemplate = imageSeries.mapImages.template;
+                        var circle = imageSeriesTemplate.createChild(am4core.Circle);
+                        circle.radius = 8;                        
+                        circle.strokeWidth = 2;
+                        circle.nonScaling = true;
+                        circle.tooltipText = "{title}";
 
+                        imageSeriesTemplate.propertyFields.latitude = "latitude";
+                        imageSeriesTemplate.propertyFields.longitude = "longitude";
+
+                        imageSeries.data = [{
+                            "latitude": 47.43,
+                            "longitude": 7.13,
+                            "title": "Alle"
+                        }, {    
+                            "latitude": 47.45,
+                            "longitude": 7.03,
+                            "title": "Basse-Allaine"
+                        }, {
+                            "latitude": 47.49,
+                            "longitude": 7.14,
+                            "title": "Beurnevésin"
+                        }, {    
+                            "latitude": 47.36,
+                            "longitude": 7.21,
+                            "title": "Boécourt"
+                        }, {  
+                            "latitude": 47.47,
+                            "longitude": 7.15,
+                            "title": "Bonfol"
+                        }, {  
+                            "latitude": 47.40,
+                            "longitude": 7.24,
+                            "title": "Bourrignon"
+                        },{
+                            "latitude": 47.44,
+                            "longitude": 7.01,
+                            "title": "Bure"
+                        },{
+                            "latitude": 47.33,
+                            "longitude": 7.35,
+                            "title": "Châtillon"   
+                        },{
+                            "latitude": 47.35,
+                            "longitude": 7.15,
+                            "title": "Clos du Doubs"   
+                        },{
+                            "latitude": 47.45,
+                            "longitude": 7.10,
+                            "title": "Coeuve"   
+                        },{
+                            "latitude": 47.41,
+                            "longitude": 7.16,
+                            "title": "Cornol"   
+                        },{
+                            "latitude": 47.35,
+                            "longitude": 7.46,
+                            "title": "Courchapoix"
+                        },{
+                            "latitude": 47.44,
+                            "longitude": 7.06,
+                            "title": "Courchavon"
+                        },{
+                            "latitude": 47.40,
+                            "longitude": 7.13,
+                            "title": "Courgenay"
+                        },{
+                            "latitude": 47.34,
+                            "longitude": 7.37,
+                            "title": "Courrendlin"  
+                        },{
+                            "latitude": 47.36,
+                            "longitude": 7.37,
+                            "title": "Courroux"
+                        },{
+                            "latitude": 47.41,
+                            "longitude": 7.04,
+                            "title": "Courtedoux"
+                        },{
+                            "latitude": 47.34,
+                            "longitude": 7.32,
+                            "title": "Courtételle"
+                        },{
+                            "latitude": 47.47,
+                            "longitude": 7.10,
+                            "title": "Damphreux"
+                        },{
+                            "latitude": 47.37,
+                            "longitude": 7.35,
+                            "title": "Delémont"
+                        }, {
+                            "latitude": 47.36,
+                            "longitude": 7.30,
+                            "title": "Develier" 
+                        },{
+                            "latitude": 47.43,
+                            "longitude": 7.34,
+                            "title": "Ederswiler"
+                        },{
+                            "latitude": 47.42,
+                            "longitude": 6.95,
+                            "title": "Fahy"
+                        },{
+                            "latitude": 47.40,
+                            "longitude": 7.08,
+                            "title": "Fontenais"
+                        },{
+                            "latitude": 47.39,
+                            "longitude": 6.94,
+                            "title": "Grandfontaine"
+                        },{
+                            "latitude": 47.38,
+                            "longitude": 7.00,
+                            "title": "Haute-Ajoie"
+                        },{
+                            "latitude": 47.35,
+                            "longitude": 7.23,
+                            "title": "Haute-Sorne" 
+                        },{
+                            "latitude": 47.43,
+                            "longitude": 7.17,
+                            "title": "La Baroche"
+                        },{
+                            "latitude": 47.28,
+                            "longitude": 7.14,
+                            "title": "Lajoux"
+                        },{
+                            "latitude": 47.26,
+                            "longitude": 7.02,
+                            "title": "Le Bémont"
+                        },{
+                            "latitude": 47.23,
+                            "longitude": 6.96,
+                            "title": "Le Noirmont"
+                        },{
+                            "latitude": 47.18,
+                            "longitude": 6.91,
+                            "title": "Les Bois"
+                        },{
+                            "latitude": 47.21,
+                            "longitude": 7.00,
+                            "title": "Les Breuleux"
+                        },{
+                            "latitude": 47.29,
+                            "longitude": 7.05,
+                            "title": "Les Enfers"
+                        },{
+                            "latitude": 47.26,
+                            "longitude": 7.13,
+                            "title": "Les Genevez"
+                        },{
+                            "latitude": 47.49,
+                            "longitude": 7.10,
+                            "title": "Lugnez"
+                        },{
+                            "latitude": 47.34,
+                            "longitude": 7.50,
+                            "title": "Mervelier"
+                        },{
+                            "latitude": 47.39,
+                            "longitude": 7.32,
+                            "title": "Mettembert"
+                        },{
+                            "latitude": 47.27,
+                            "longitude": 7.05,
+                            "title": "Montfaucon"
+                        },{
+                            "latitude": 47.41,
+                            "longitude": 7.32,
+                            "title": "Movelier"
+                        },{
+                            "latitude": 47.25,
+                            "longitude": 6.98,
+                            "title": "Muriaux"
+                        },{
+                            "latitude": 47.41,
+                            "longitude": 7.29,
+                            "title": "Pleigne"
+                        },{
+                            "latitude": 47.42,
+                            "longitude": 7.08,
+                            "title": "Porrentruy"
+                        },{
+                            "latitude": 47.35,
+                            "longitude": 7.34,
+                            "title": "Rossemaison" 
+                        },{  
+                            "latitude": 47.26,
+                            "longitude": 7.00,
+                            "title": "Saignelégier" 
+                        },{ 
+                            "latitude": 47.31,
+                            "longitude": 7.11,
+                            "title": "Saint-Brais" 
+                        },{ 
+                            "latitude": 47.30,
+                            "longitude": 7.15,
+                            "title": "Saulcy" 
+                        },{ 
+                            "latitude": 47.31,
+                            "longitude": 7.05,
+                            "title": "Soubey" 
+                        },{ 
+                            "latitude": 47.39,
+                            "longitude": 7.37,
+                            "title": "Soyhières" 
+                        },{                                                
+                            "latitude": 47.35,
+                            "longitude": 7.41,
+                            "title": "Val-Terbi"  
+                        },{
+                            "latitude": 47.45,
+                            "longitude": 7.15,
+                            "title": "Vendlincourt"                    
+                        }];
+
+                        var série40to50 = cantonJU.series.push(new am4maps.MapPolygonSeries());
+                            série40to50.name = "40 à 50 %";
+                            série40to50.value = "40 à 50 %";
+                            série40to50.title = "Oui en %";
+                            série40to50.useGeodata = true;
+                            série40to50.include = [""];
+                            série40to50.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
+                            circle.fill = am4core.color("#fd7272")
+                            circle.mapPolygons.template.fill = am4core.color("#fd7272")
                     </script>
                 </div>
             </div>

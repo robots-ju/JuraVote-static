@@ -15,7 +15,7 @@
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
-
+    <script src="https://github.com/robots-ju/JuraVote-static/blob/developpement/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET2.json"></script>
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <!-- Mettre les styles CSS personnalisés -->
 </head>
@@ -180,7 +180,7 @@
                     <div id="chartdiv3" style="width: 100%; height: 350px; padding-top: 5%"></div>
                     <script>
                         var cantonJU = am4core.create("chartdiv3", am4maps.MapChart);
-                        cantonJU.geodataSource.url = "C:\Users\danie\OneDrive\Documents\GitHub\JuraVote-static\swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET1.json";
+                        cantonJU.geodata = swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET2.json;
                         cantonJU.projection = new am4maps.projections.Miller();
                         var polygonSeries = cantonJU.series.push(new am4maps.MapPolygonSeries());
                         polygonSeries.useGeodata = true;

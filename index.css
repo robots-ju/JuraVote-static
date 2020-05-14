@@ -3,11 +3,10 @@
 }
 
 .logo {
-    height: 200px;
-
+    height: 150px;
     border-style: solid;
     border-color: #990000;
-    border-width: 5px;
+    border-width: 3px;
 }
 
 .uk-button-secondary {

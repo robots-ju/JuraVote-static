@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
+body {
+    
+}
+
 .uk-heading-large {
     color: #990000 ;
     text-align: center;
@@ -17,26 +21,24 @@
     text-align: center;
 }
 
-p{
+p, td, th{
     font-family: 'Montserrat', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5, a, b {
     font-family: 'Roboto', sans-serif !important;
 }
 
 
-.uk-link, a {
+a {
     color: #D20603;
     text-decoration: none;
 }
 
 .uk-link, a:hover {
-     color: #990000;
+    color: #990000;
     text-decoration: none;
- }
-
-
+}
 
 #navbar-iframe {
     display: block;
@@ -47,20 +49,18 @@ h1, h2, h3, h4, h5, a {
     box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
+#footer-iframe {
+    display: none;
+    width: 100%;
+    height: 281px;
+    position: relative;
+    z-index: 2;
+}
+
 html{
     background-color: #F5F5F5;
     height: 100%;
 
-}
-
-footer {
-    background-color: darkred;
-    display: flex;
-    flex-direction: row;
-}
-
-footer > div {
-    width: 100%;
 }
 
 main {
@@ -94,8 +94,12 @@ and (min-width: 1600px) {
     main {
         padding-top: 0;
     }
-}
 
+
+    #footer-iframe {
+        display: block;
+    }
+}
 
 @media (max-width: 500px) {
     .titre {

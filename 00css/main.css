@@ -133,3 +133,13 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
     height: 150px;
     width: auto;
 }
+
+.chevron-down {
+    height: 100%;
+    opacity: 50%;
+}
+
+.switcher-active .chevron-down {
+    opacity: 100%;
+    color: #D20603
+  }

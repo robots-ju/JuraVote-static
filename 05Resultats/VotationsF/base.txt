@@ -101,5 +101,3 @@
 
                             resultatsEnergieCH.legend = new am4maps.Legend();
                             resultatsEnergieCH.legend.position = "left";
-
-                            

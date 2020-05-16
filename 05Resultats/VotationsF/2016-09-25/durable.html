@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../../../img/Logo/JuraVote.png" /> <!-- Mettre le bon chemin vers le fichier -->
-    <title>JuraVote | Votation 27.11.2016</title>
+    <title>JuraVote | Votation 25.09.2016</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
     <link rel="stylesheet" href="../../../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
@@ -67,7 +67,7 @@
 </header>
 <main>
     <section style="padding: 2%">
-        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 27 novembre 2016</h1>
+        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 25 septembre 2016</h1>
         <hr>
         <div class="uk-child-width-1-2@m uk-child-width-1-1@s uk-grid-small uk-grid-match" uk-grid>
             <div>
@@ -78,8 +78,8 @@
                         </div>
                     </div>
                     <div class="uk-card-body uk-text-left">
-                        <p><b>Objet : </b>Initiative populaire du 16.11.2012 «Pour la sortie programmée de l'énergie nucléaire (Initiative «Sortir du nucléaire»)»</p>
-                        <p><b>Participation : </b>45,38 %</p>
+                        <p><b>Objet : </b>Initiative populaire du 06.09.2012 «Pour économie durable et fondée sur une gestion efficiente des ressources (économie verte)»</p>
+                        <p><b>Participation : </b>43,00 %</p>
                         <p><b>Résultat : </b>Refusé</p>
                         <p><b>Type de la votation : </b>Votation fédérale</p>
                         <p><b>Mode de votation : </b>Initiative</p>
@@ -94,40 +94,40 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div id="chartNucleaire" style="width: 100%; height: 250px;"></div>
+                        <div id="chartDurable" style="width: 100%; height: 250px;"></div>
                         <script>
                             // Create chart instance
-                            var resultatNucleaire = am4core.create("chartNucleaire", am4charts.PieChart);
+                            var resultatDurable = am4core.create("chartDurable", am4charts.PieChart);
 
                             // Add data
-                            resultatNucleaire.data = [{
+                            resultatDurable.data = [{
                                 "votes": "OUI",
-                                "suffrages": 1099409
+                                "suffrages": 819770
                             }, {
                                 "votes": "NON",
-                                "suffrages": 1300860
+                                "suffrages": 1430273
                             }];
 
                             // Add and configure Series
-                            var dataNucleaire = resultatNucleaire.series.push(new am4charts.PieSeries());
-                            dataNucleaire.dataFields.value = "suffrages";
-                            dataNucleaire.dataFields.category = "votes";
+                            var dataDurable = resultatDurable.series.push(new am4charts.PieSeries());
+                            dataDurable.dataFields.value = "suffrages";
+                            dataDurable.dataFields.category = "votes";
 
                             // Let's cut a hole in our Pie chart the size of 40% the radius
-                            resultatNucleaire.innerRadius = am4core.percent(40);
+                            resultatDurable.innerRadius = am4core.percent(40);
 
                             // Disable ticks and labels
-                            dataNucleaire.labels.template.disabled = true;
-                            dataNucleaire.ticks.template.disabled = true;
+                            dataDurable.labels.template.disabled = true;
+                            dataDurable.ticks.template.disabled = true;
 
                             // Disable tooltips
-                            dataNucleaire.slices.template.tooltipText = "";
+                            dataDurable.slices.template.tooltipText = "";
 
                             // Add a legend
-                            resultatNucleaire.legend = new am4charts.Legend();
-                            resultatNucleaire.legend.position = "right";
+                            resultatDurable.legend = new am4charts.Legend();
+                            resultatDurable.legend.position = "right";
 
-                            dataNucleaire.colors.list = [
+                            dataDurable.colors.list = [
                                 am4core.color("#46ff00"),
                                 am4core.color("#ff0000"),
                             ]
@@ -155,19 +155,19 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div class="uk-align-right" id="chartNucleairech" style="width: 100%; height: 300px;"></div>
+                        <div class="uk-align-right" id="chartDurablech" style="width: 100%; height: 300px;"></div>
                         <script>
                             // Create map instance
-                            var resultatsNucleaireCH = am4core.create("chartNucleairech", am4maps.MapChart);
+                            var resultatsDurableCH = am4core.create("chartDurablech", am4maps.MapChart);
 
                             // Set map definition
-                            resultatsNucleaireCH.geodata = am4geodata_switzerlandHigh;
+                            resultatsDurableCH.geodata = am4geodata_switzerlandHigh;
 
                             // Set projection
-                            resultatsNucleaireCH.projection = new am4maps.projections.Miller();
+                            resultatsDurableCH.projection = new am4maps.projections.Miller();
 
                             // Create map polygon series
-                            var polygonSeries = resultatsNucleaireCH.series.push
+                            var polygonSeries = resultatsDurableCH.series.push
 
 
                             // Make map load polygon (like country names) data from GeoJSON
@@ -175,50 +175,49 @@
 
                             //Create data series
                             
-                            var série30to40 = resultatsNucleaireCH.series.push(new am4maps.MapPolygonSeries());
+                            var série20to30 = resultatsDurableCH.series.push(new am4maps.MapPolygonSeries());
+                            série20to30.name = "20 à 30 %";
+                            série20to30.value = "20 à 30 %";
+                            série20to30.title = "Oui en %";
+                            série20to30.useGeodata = true;
+                            série20to30.include = ["CH-UR","CH-SZ","CH-OW","CH-NW","CH-ZG","CH-AI","CH-VS"];
+                            série20to30.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
+                            série20to30.fill = am4core.color("#ca2f2f")
+                            série20to30.mapPolygons.template.fill = am4core.color("#ca2f2f")
+
+                            var série30to40 = resultatsDurableCH.series.push(new am4maps.MapPolygonSeries());
                             série30to40.name = "30 à 40 %";
                             série30to40.value = "30 à 40 %";
                             série30to40.title = "Oui en %";
                             série30to40.useGeodata = true;
-                            série30to40.include = ["CH-SZ","CH-LU","CH-OW","CH-NW","CH-GL","CH-ZG","CH-SO","CH-AI","CH-SG","CH-AG"];
+                            série30to40.include = ["CH-ZH","CH-BE","CH-LU","CH-GL","CH-FR","CH-SO","CH-BL","CH-SH",
+                            "CH-AR","CH-SG","CH-GR","CH-AG","CH-TG"];
                             série30to40.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série30to40.fill = am4core.color("#e74545")
                             série30to40.mapPolygons.template.fill = am4core.color("#e74545")
 
-                            var série40to50 = resultatsNucleaireCH.series.push(new am4maps.MapPolygonSeries());
+                            var série40to50 = resultatsDurableCH.series.push(new am4maps.MapPolygonSeries());
                             série40to50.name = "40 à 50 %";
                             série40to50.value = "40 à 50 %";
                             série40to50.title = "Oui en %";
                             série40to50.useGeodata = true;
-                            série40to50.include = ["CH-ZH","CH-BE","CH-UR","CH-FR","CH-SH","CH-AR","CH-GR","CH-TG","CH-TI","CH-VS"];
+                            série40to50.include = ["CH-BS","CH-TI","CH-VD","CH-NE","CH-JU"];
                             série40to50.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série40to50.fill = am4core.color("#fd7272")
                             série40to50.mapPolygons.template.fill = am4core.color("#fd7272")
-                            
-                            var série50to60 = resultatsNucleaireCH.series.push(new am4maps.MapPolygonSeries());
+
+                            var série50to60 = resultatsDurableCH.series.push(new am4maps.MapPolygonSeries());
                             série50to60.name = "50 à 60 %";
                             série50to60.value = "50 à 60 %";
                             série50to60.title = "Oui en %";
                             série50to60.useGeodata = true;
-                            série50to60.include = ["CH-BL","CH-VD","CH-NE","CH-GE","CH-JU"];
+                            série50to60.include = ["CH-GE"];
                             série50to60.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série50to60.fill = am4core.color("#88e56f")
-                            série50to60.mapPolygons.template.fill = am4core.color("#88e56f")  
-
-                            var série60to70 = resultatsNucleaireCH.series.push(new am4maps.MapPolygonSeries());
-                            série60to70.name = "60 à 70 %";
-                            série60to70.value = "60 à 70 %";
-                            série60to70.title = "Oui en %";
-                            série60to70.useGeodata = true;
-                            série60to70.include = ["CH-BS"];
-                            série60to70.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
-                            série60to70.fill = am4core.color("#63cf46")
-                            série60to70.mapPolygons.template.fill = am4core.color("#63cf46")
-
-                            
+                            série50to60.mapPolygons.template.fill = am4core.color("#88e56f")
                     
-                            resultatsNucleaireCH.legend = new am4maps.Legend();
-                            resultatsNucleaireCH.legend.position = "left";
+                            resultatsDurableCH.legend = new am4maps.Legend();
+                            resultatsDurableCH.legend.position = "left";
                         </script>
                     </div>
                 </div>

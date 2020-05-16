@@ -69,25 +69,16 @@
     </div>
 </header>
 <main>
-    <section style="padding: 2%">
+    <section style="padding-left: 10%; padding-right: 10%; padding-top: 5%;">
         <div class="uk-grid" uk-grid>
-            <div class="uk-width-1-6@xl"></div>
-            <section class="page uk-width-expand@m">
-                <div class="uk-grid" uk-grid>
-                    <div class="uk-width-1-4@m">
-                        <div class="image uk-text-left@m uk-text-center">
-                            <img class="logo" src="img/Logo/JuraVote/Logo.png"
-                                 alt="Logo JuraVote">
-                        </div>
-                    </div>
-                    <div class="uk-width-3-4@m uk-text-middle uk-text-center texte-center-vertical">
-                        <h2>Bienvenue sur Juravote !</h2>
-                        <p>Nous vous souhaitons une agréable visite.</p>
-                    </div>
-                </div>
-
+            <section class="page uk-width-expand@m" style="padding-left: 2%;">
+                <div class="uk-panel">
+                    <img class="uk-align-left uk-margin-remove-adjacent"
+                    src="img/Logo/JuraVote/Logo.png" width="125" height="125" alt="Logo Juravote">
+                    <h1>Bienvenue sur Juravote !</h1>
+                    <p>Nous vous souhaitons une agréable visite et restons à disposition pour toute proposition ou question !</p>
+                </div>                
                 <hr>
-
                 <!--                <div class="nav_rapide">-->
                 <!--                    <h2>Navigation rapide</h2>-->
                 <!--                    <div class="uk-child-width-1-1 uk-child-width-1-2@m uk-child-width-1-3@xl uk-grid-small" uk-grid>-->
@@ -100,11 +91,9 @@
                 <!--                        </a></div>-->
                 <!--                    </div>-->
                 <!--                </div>-->
-
                 <!--                <hr>-->
-
                 <div>
-                    <h2>Calendrier</h2>
+                    <h2>Calendrier des votations en Suisse</h2>
                     <table class="calendrier uk-table-striped uk-table uk-table-justify uk-table-divider">
                         <thead>
                         <tr>
@@ -123,6 +112,11 @@
                                 <td>05 juillet 2020</td>
                                 <td>Election communale - Lajoux</td>
                                 <td><a href="./04Elections/Communes/Lajoux.html">Plus d'infos</a></td>
+                            </tr>
+                            <tr>
+                                <td>19 juillet 2020</td>
+                                <td>Election communale - Beurnevésin</td>
+                                <td><a href="./04Elections/Communes/Beurnevesin.html">Plus d'infos</a></td>
                             </tr>
                             <tr>
                                 <td>27 septembre 2020</td>
@@ -148,10 +142,10 @@
                     </table>
                 </div>
             </section>
-            <aside class="uk-width-1-6@xl">
-                <div class="uk-align-right" style="display:inline-block; width: 100%; height:max-content;">
-                    <h2>Fil d'actualité Twitter</h2>
+            <aside>
+                <div class="uk-align-center" style="display:inline-block; width: 100%; height:max-content;">
                     <span>
+                        <h1>Fil d'actualité Twitter</h1>
                         <a class="twitter-timeline" href="https://twitter.com/JuraVote?ref_src=twsrc%5Etfw">Tweets by JuraVote</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </span>
@@ -162,6 +156,8 @@
     </main>
 </body>
 <footer>
-    
+    <div class="footer">
+        <iframe src="00Footer/footer.html?active=Accueil" id="footer-iframe"></iframe>
+    </div>
 </footer>
 </html>

@@ -143,3 +143,7 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
     opacity: 100%;
     color: #D20603
   }
+
+.switcher-active .uk-card-title {
+    color: #D20603
+}

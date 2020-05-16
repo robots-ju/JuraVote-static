@@ -1,4 +1,4 @@
-  //Create data series
+                            //Create data series
                             var série0to10 = resultatsEnergieCH.series.push(new am4maps.MapPolygonSeries());
                             série0to10.name = "0 à 10 %";
                             série0to10.value = "0 à 10 %";
@@ -101,3 +101,5 @@
 
                             resultatsEnergieCH.legend = new am4maps.Legend();
                             resultatsEnergieCH.legend.position = "left";
+
+                            

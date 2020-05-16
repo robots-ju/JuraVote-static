@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../../../img/Logo/JuraVote.png" /> <!-- Mettre le bon chemin vers le fichier -->
-    <title>JuraVote | Votation 24.09.2018</title>
+    <title>JuraVote | Votation 12.02.2017</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
     <link rel="stylesheet" href="../../../00css/uikit.min.css" /> <!-- Mettre le bon chemin vers le fichier -->
@@ -67,7 +67,7 @@
 </header>
 <main>
     <section style="padding: 2%">
-        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 24 septembre 2017</h1>
+        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 12 février 2017</h1>
         <hr>
         <div class="uk-child-width-1-2@m uk-child-width-1-1@s uk-grid-small uk-grid-match" uk-grid>
             <div>
@@ -78,10 +78,9 @@
                         </div>
                     </div>
                     <div class="uk-card-body uk-text-left">
-                        <p><b>Objet : </b>Loi fédérale du 17.03.2017 sur la
-                            réforme de la prévoyance vieillesse 2020</p>
-                        <p><b>Participation : </b>47.39 %</p>
-                        <p><b>Résultat : </b>Refusé</p>
+                        <p><b>Objet : </b>Arrêté fédéral du 30.09.2016 concernant la naturalisation facilitée des étrangers de la troisième génération</p>
+                        <p><b>Participation : </b>46,84 %</p>
+                        <p><b>Résultat : </b>Accepté</p>
                         <p><b>Type de la votation : </b>Votation fédérale</p>
                         <p><b>Mode de votation : </b>Référendum</p>
                     </div>
@@ -95,40 +94,40 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div id="chartPrévoyance" style="width: 100%; height: 250px;"></div>
+                        <div id="chartNaturalisation" style="width: 100%; height: 250px;"></div>
                         <script>
                             // Create chart instance
-                            var resultatPrévoyance = am4core.create("chartPrévoyance", am4charts.PieChart);
+                            var resultatNaturalisation = am4core.create("chartNaturalisation", am4charts.PieChart);
 
                             // Add data
-                            resultatPrévoyance.data = [{
+                            resultatNaturalisation.data = [{
                                 "votes": "OUI",
-                                "suffrages": 1186203
+                                "suffrages": 1499627
                             }, {
                                 "votes": "NON",
-                                "suffrages": 1320952
+                                "suffrages": 982844
                             }];
 
                             // Add and configure Series
-                            var dataPrévoyance = resultatPrévoyance.series.push(new am4charts.PieSeries());
-                            dataPrévoyance.dataFields.value = "suffrages";
-                            dataPrévoyance.dataFields.category = "votes";
+                            var dataNaturalisation = resultatNaturalisation.series.push(new am4charts.PieSeries());
+                            dataNaturalisation.dataFields.value = "suffrages";
+                            dataNaturalisation.dataFields.category = "votes";
 
                             // Let's cut a hole in our Pie chart the size of 40% the radius
-                            resultatPrévoyance.innerRadius = am4core.percent(40);
+                            resultatNaturalisation.innerRadius = am4core.percent(40);
 
                             // Disable ticks and labels
-                            dataPrévoyance.labels.template.disabled = true;
-                            dataPrévoyance.ticks.template.disabled = true;
+                            dataNaturalisation.labels.template.disabled = true;
+                            dataNaturalisation.ticks.template.disabled = true;
 
                             // Disable tooltips
-                            dataPrévoyance.slices.template.tooltipText = "";
+                            dataNaturalisation.slices.template.tooltipText = "";
 
                             // Add a legend
-                            resultatPrévoyance.legend = new am4charts.Legend();
-                            resultatPrévoyance.legend.position = "right";
+                            resultatNaturalisation.legend = new am4charts.Legend();
+                            resultatNaturalisation.legend.position = "right";
 
-                            dataPrévoyance.colors.list = [
+                            dataNaturalisation.colors.list = [
                                 am4core.color("#46ff00"),
                                 am4core.color("#ff0000"),
                             ]
@@ -156,58 +155,69 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div class="uk-align-right" id="chartPrévoyancech" style="width: 100%; height: 300px;"></div>
+                        <div class="uk-align-right" id="chartNaturalisationch" style="width: 100%; height: 300px;"></div>
                         <script>
                             // Create map instance
-                            var resultatsPrévoyanceCH = am4core.create("chartPrévoyancech", am4maps.MapChart);
+                            var resultatsNaturalisationCH = am4core.create("chartNaturalisationch", am4maps.MapChart);
 
                             // Set map definition
-                            resultatsPrévoyanceCH.geodata = am4geodata_switzerlandHigh;
+                            resultatsNaturalisationCH.geodata = am4geodata_switzerlandHigh;
 
                             // Set projection
-                            resultatsPrévoyanceCH.projection = new am4maps.projections.Miller();
+                            resultatsNaturalisationCH.projection = new am4maps.projections.Miller();
 
                             // Create map polygon series
-                            var polygonSeries = resultatsPrévoyanceCH.series.push
+                            var polygonSeries = resultatsNaturalisationCH.series.push
 
 
                             // Make map load polygon (like country names) data from GeoJSON
                             polygonSeries.useGeodata = true;
 
                             //Create data series
-                            var série30to40 = resultatsPrévoyanceCH.series.push(new am4maps.MapPolygonSeries());
-                            série30to40.name = "30 à 40 %";
-                            série30to40.value = "30 à 40 %";
-                            série30to40.title = "Oui en %";
-                            série30to40.useGeodata = true;
-                            série30to40.include = ["CH-SZ", "CH-NW", "CH-GL", "CH-AR", "CH-AI", "CH-GE"];
-                            série30to40.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
-                            série30to40.fill = am4core.color("#e74545")
-                            série30to40.mapPolygons.template.fill = am4core.color("#e74545")
+                            
 
-                            var série40to50 = resultatsPrévoyanceCH.series.push(new am4maps.MapPolygonSeries());
+                            var série40to50 = resultatsNaturalisationCH.series.push(new am4maps.MapPolygonSeries());
                             série40to50.name = "40 à 50 %";
                             série40to50.value = "40 à 50 %";
                             série40to50.title = "Oui en %";
                             série40to50.useGeodata = true;
-                            série40to50.include = ["CH-LU", "CH-UR", "CH-OW", "CH-ZG", "CH-SO", "CH-BL", "CH-SH",
-                            "CH-SG", "CH-GR", "CH-AG", "CH-TG", "CH-VD"];
+                            série40to50.include = ["CH-TG", "CH-UR", "CH-SZ", "CH-OW", "CH-GL", "CH-AI", "CH-SG"];
                             série40to50.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série40to50.fill = am4core.color("#fd7272")
                             série40to50.mapPolygons.template.fill = am4core.color("#fd7272")
 
-                            var série50to60 = resultatsPrévoyanceCH.series.push(new am4maps.MapPolygonSeries());
+                            var série50to60 = resultatsNaturalisationCH.series.push(new am4maps.MapPolygonSeries());
                             série50to60.name = "50 à 60 %";
                             série50to60.value = "50 à 60 %";
                             série50to60.title = "Oui en %";
                             série50to60.useGeodata = true;
-                            série50to60.include = ["CH-ZH", "CH-BE", "CH-FR", "CH-BS", "CH-TI", "CH-VD", "CH-NE", "CH-JU"];
+                            série50to60.include = ["CH-LU", "CH-NW", "CH-ZG", "CH-SO", "CH-BL", "CH-SH", "CH-AR", "CH-GR","CH-AG","CH-TI"];
                             série50to60.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série50to60.fill = am4core.color("#88e56f")
                             série50to60.mapPolygons.template.fill = am4core.color("#88e56f")  
+
+                            var série60to70 = resultatsNaturalisationCH.series.push(new am4maps.MapPolygonSeries());
+                            série60to70.name = "60 à 70 %";
+                            série60to70.value = "60 à 70 %";
+                            série60to70.title = "Oui en %";
+                            série60to70.useGeodata = true;
+                            série60to70.include = ["CH-ZH","CH-BE","CH-FR","CH-BS","CH-VS"];
+                            série60to70.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
+                            série60to70.fill = am4core.color("#63cf46")
+                            série60to70.mapPolygons.template.fill = am4core.color("#63cf46")
+
+                            var série70to80 = resultatsNaturalisationCH.series.push(new am4maps.MapPolygonSeries());
+                            série70to80.name = "70 à 80 %";
+                            série70to80.value = "70 à 80 %";
+                            série70to80.title = "Oui en %";
+                            série70to80.useGeodata = true;
+                            série70to80.include = ["CH-VD","CH-NE","CH-GE","CH-JU"];
+                            série70to80.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
+                            série70to80.fill = am4core.color("#42c121")
+                            série70to80.mapPolygons.template.fill = am4core.color("#42c121")
                     
-                            resultatsPrévoyanceCH.legend = new am4maps.Legend();
-                            resultatsPrévoyanceCH.legend.position = "left";
+                            resultatsNaturalisationCH.legend = new am4maps.Legend();
+                            resultatsNaturalisationCH.legend.position = "left";
                         </script>
                     </div>
                 </div>

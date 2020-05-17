@@ -21,7 +21,7 @@ a {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .cards {
         text-align: center;
     }
@@ -29,4 +29,17 @@ a {
     .titre {
         font-size: 2rem;
     }
+
+    .titre-switcher {
+        font-size: 0.7rem;
+    }
+
+    .chevron-down {
+        height: 50%;
+    }
+}
+
+
+.uk-card-footer {
+    height: 50%;
 }

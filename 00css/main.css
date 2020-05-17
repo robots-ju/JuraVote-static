@@ -49,12 +49,22 @@ a {
     box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
+.footer {
+	position: relative;
+	padding-bottom: 31.6%;
+	padding-top: 25px;
+	height: 0;
+}
+
 #footer-iframe {
-    display: none;
-    width: 100%;
-    height: 525px;
-    position: relative;
-    z-index: 2;
+    display:none;
+}
+.footer iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 html{

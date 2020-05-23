@@ -15,6 +15,14 @@ a {
  text-align: center;
 }
 
+.switcher-buttons {
+    text-align: center;
+}
+
+.switcher-buttons button {
+    margin-top: 2%;
+}
+
 @media (max-width: 500px) {
     .cards {
         text-align: center;

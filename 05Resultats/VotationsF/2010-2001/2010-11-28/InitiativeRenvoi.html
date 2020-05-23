@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../../../../img/Logo/JuraVote/Icon.png"/> <!-- Mettre le bon chemin vers le fichier -->
-    <title>JuraVote | Votation 17.06.2012</title>
+    <title>JuraVote | Votation 28.11.2010</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../../../(00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
     <link rel="stylesheet" href="../../../../00css/uikit.min.css"/> <!-- Mettre le bon chemin vers le fichier -->
     <script src="../../../../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
     <script src="../../../../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
@@ -63,7 +63,7 @@
 </header>
 <main>
     <section style="padding: 2%">
-        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 11 mars 2012</h1>
+        <h1 class="uk-heading-medium text-rouge-fonce uk-text-center">Résultats de la votation fédérale du 28 novembre 2010</h1>
         <hr>
         <div class="uk-child-width-1-2@m uk-child-width-1-1@s uk-grid-small uk-grid-match" uk-grid>
             <div>
@@ -74,9 +74,9 @@
                         </div>
                     </div>
                     <div class="uk-card-body uk-text-left">
-                        <p><b>Objet : </b>Initiative populaire du 23.01.2009 'Accéder à la propriété grâce à l'épargne-logement'</p>
-                        <p><b>Participation : </b>38.53 %</p>
-                        <p><b>Résultat : </b>Refusé</p>
+                        <p><b>Objet : </b>Initiative populaire du 15.02.2008 'Pour le renvoi des étrangers criminels (Initiative sur le renvoi)'</p>
+                        <p><b>Participation : </b>52.93 %</p>
+                        <p><b>Résultat : </b>Accepté</p>
                         <p><b>Type de la votation : </b>Votation fédérale</p>
                         <p><b>Mode de votation : </b>Initiative populaire</p>
                     </div>
@@ -90,42 +90,46 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div id="chartEpargneLogement2" style="width: 100%; height: 250px;"></div>
+                        <div id="chartRenvoi" style="width: 100%; height: 250px;"></div>
                         <script>
                             // Create chart instance
-                            var resultatEpargneLogement2 = am4core.create("chartEpargneLogement2", am4charts.PieChart);
+                            var resultatRenvoi = am4core.create("chartRenvoi", am4charts.PieChart);
 
                             // Add data
-                            resultatEpargneLogement2.data = [{
+                            resultatRenvoi.data = [{
                                 "votes": "OUI",
-                                "suffrages": 601449
+                                "suffrages": 1397923
                             }, {
                                 "votes": "NON",
-                                "suffrages": 1332839
+                                "suffrages": 1243942
+                            },{
+                                "votes": "NON COMPTABILISES",
+                                "suffrages": 32102
                             }];
 
                             // Add and configure Series
-                            var dataEpargneLogement2 = resultatEpargneLogement2.series.push(new am4charts.PieSeries());
-                            dataEpargneLogement2.dataFields.value = "suffrages";
-                            dataEpargneLogement2.dataFields.category = "votes";
+                            var dataRenvoi = resultatRenvoi.series.push(new am4charts.PieSeries());
+                            dataRenvoi.dataFields.value = "suffrages";
+                            dataRenvoi.dataFields.category = "votes";
 
                             // Let's cut a hole in our Pie chart the size of 40% the radius
-                            resultatEpargneLogement2.innerRadius = am4core.percent(40);
+                            resultatRenvoi.innerRadius = am4core.percent(40);
 
                             // Disable ticks and labels
-                            dataEpargneLogement2.labels.template.disabled = true;
-                            dataEpargneLogement2.ticks.template.disabled = true;
+                            dataRenvoi.labels.template.disabled = true;
+                            dataRenvoi.ticks.template.disabled = true;
 
                             // Disable tooltips
-                            dataEpargneLogement2.slices.template.tooltipText = "";
+                            dataRenvoi.slices.template.tooltipText = "";
 
                             // Add a legend
-                            resultatEpargneLogement2.legend = new am4charts.Legend();
-                            resultatEpargneLogement2.legend.position = "right";
+                            resultatRenvoi.legend = new am4charts.Legend();
+                            resultatRenvoi.legend.position = "right";
 
-                            dataEpargneLogement2.colors.list = [
+                            dataRenvoi.colors.list = [
                             am4core.color("#89ff6a"),
                             am4core.color("#ff4242"),
+                            am4core.color("#87CEEB"),
                             ]
                         </script>
                     </div>
@@ -151,61 +155,69 @@
                         </div>
                     </div>
                     <div class="uk-card-body">
-                        <div class="uk-align-right" id="chartEpargneLogement2CH" style="width: 100%; height: 300px;"></div>
+                        <div class="uk-align-right" id="chartRenvoiCH" style="width: 100%; height: 300px;"></div>
                         <script>
                             // Create map instance
-                            var resultatsEpargneLogement2CH = am4core.create("chartEpargneLogement2CH", am4maps.MapChart);
+                            var resultatsRenvoiCH = am4core.create("chartRenvoiCH", am4maps.MapChart);
 
                             // Set map definition
-                            resultatsEpargneLogement2CH.geodata = am4geodata_switzerlandHigh;
+                            resultatsRenvoiCH.geodata = am4geodata_switzerlandHigh;
 
                             // Set projection
-                            resultatsEpargneLogement2CH.projection = new am4maps.projections.Miller();
+                            resultatsRenvoiCH.projection = new am4maps.projections.Miller();
 
                             // Create map polygon series
-                            var polygonSeries = resultatsEpargneLogement2CH.series.push
+                            var polygonSeries = resultatsRenvoiCH.series.push
 
 
                             // Make map load polygon (like country names) data from GeoJSON
                             polygonSeries.useGeodata = true;
 
                             //Create data series
-                    
-                            var série20to30 = resultatsEpargneLogement2CH.series.push(new am4maps.MapPolygonSeries());
+                         
+                            var série10to20 = resultatsRenvoiCH.series.push(new am4maps.MapPolygonSeries());
+                            série10to20.name = "10 à 20 %";
+                            série10to20.value = "10 à 20 %";
+                            série10to20.title = "Oui en %";                                                                                                                                                                                                                                                                                     
+                            série10to20.useGeodata = true;
+                            série10to20.include = ["CH-AI"];
+                            série10to20.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
+                            série10to20.fill = am4core.color("#db0000")
+                            série10to20.mapPolygons.template.fill = am4core.color("#db0000")
+
+                            var série20to30 = resultatsRenvoiCH.series.push(new am4maps.MapPolygonSeries());
                             série20to30.name = "20 à 30 %";
                             série20to30.value = "20 à 30 %";
                             série20to30.title = "Oui en %";
                             série20to30.useGeodata = true;
-                            série20to30.include = [ "CH-ZH", "CH-BE", "CH-LU", "CH-UR", "CH-OW", "CH-NW", "CH-GL", "CH-FR", "CH-SO", "CH-BS", "CH-AI", "CH-SG", "CH-TG", "CH-JU"];
+                            série20to30.include = ["CH-LU", "CH-UR", "CH-SZ", "CH-OW", "CH-NW", "CH-GL", "CH-ZG", "CH-AR", "CH-SG", "CH-GR", "CH-AG", "CH-TG"];
                             série20to30.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série20to30.fill = am4core.color("#ca2f2f")
-                            série20to30.mapPolygons.template.fill = am4core.color("#ca2f2f")
+                            série20to30.mapPolygons.template.fill = am4core.color("#ca2f2f")    
 
-                            var série30to40 = resultatsEpargneLogement2CH.series.push(new am4maps.MapPolygonSeries());
+                            var série30to40 = resultatsRenvoiCH.series.push(new am4maps.MapPolygonSeries());
                             série30to40.name = "30 à 40 %";
                             série30to40.value = "30 à 40 %";
                             série30to40.title = "Oui en %";
                             série30to40.useGeodata = true;
-                            série30to40.include = ["CH-SZ", "CH-ZG", "CH-SH", "CH-AR", "CH-GR", "CH-AG", "CH-VD", "CH-VS", "CH-NE",];
+                            série30to40.include = ["CH-ZH", "CH-BE", "CH-FR", "CH-SO", "CH-BS", "CH-BL", "CH-SH", "CH-VS"];
                             série30to40.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série30to40.fill = am4core.color("#e74545")
                             série30to40.mapPolygons.template.fill = am4core.color("#e74545")
 
-                            var série40to50 = resultatsEpargneLogement2CH.series.push(new am4maps.MapPolygonSeries());
+                            var série40to50 = resultatsRenvoiCH.series.push(new am4maps.MapPolygonSeries());
                             série40to50.name = "40 à 50 %";
                             série40to50.value = "40 à 50 %";
                             série40to50.title = "Oui en %";
                             série40to50.useGeodata = true;
-                            série40to50.include = ["CH-BL", "CH-TI", "CH-GE"];
+                            série40to50.include = ["CH-TI", "CH-VD", "CH-NE", "CH-GE", "CH-JU"];
                             série40to50.mapPolygons.template.tooltipText = "{title} - {name} - {value}";
                             série40to50.fill = am4core.color("#fd7272")
                             série40to50.mapPolygons.template.fill = am4core.color("#fd7272")
 
-                            resultatsEpargneLogement2CH.legend = new am4maps.Legend();
-                            resultatsEpargneLogement2CH.legend.position = "left";
-
+                            resultatsRenvoiCH.legend = new am4maps.Legend();
+                            resultatsRenvoiCH.legend.position = "left";
                             
-                                                
                         </script>
                     </div>
                 </div>

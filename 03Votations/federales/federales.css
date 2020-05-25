@@ -1,32 +1,29 @@
-.contenu {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
 .titre {
-    margin-top: 2%;
-}
-
-.titre-section {
     color: #990000;
-    text-align: left;
-    padding-bottom: 1%;
+    text-align: center;
 }
 
-.image-presentation {
-    display: block;
-    max-width: 100%;
-    margin: auto;
+.cards {
+    height: 100%;
+    color: white;
+    background-color: #990000;
 }
 
-main {
-    font-size: 1.2rem;
+.cards:hover {
+    opacity: 75%;
+    transition: 500ms;
 }
 
-.pour {
-    color: #27ae60;
+.uk-grid-small {
+    text-align: center;
 }
 
-.contre {
-    color: #D20603;
+@media (max-width: 500px) {
+    .cards {
+        text-align: center;
+    }
+
+    .titre {
+        font-size: 2rem;
+    }
 }

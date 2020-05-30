@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
 body {
+    
 }
 
 .uk-heading-large {
@@ -45,22 +46,25 @@ a {
     height: 100%;
     position: relative;
     z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
 .footer {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100px;
+	position: relative;
+	padding-bottom: 28.6%;
+	padding-top: 25px;
+	height: 0;
 }
 
 #footer-iframe {
-    display: none;
-
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 295px;
+    display:none;
+}
+.footer iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 html{
@@ -104,10 +108,6 @@ and (min-width: 1600px) {
 
     #footer-iframe {
         display: block;
-    }
-
-    .footer {
-        height: 600px;
     }
 }
 

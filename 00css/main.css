@@ -159,3 +159,7 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
 .switcher-active .uk-card-title {
     color: #D20603
 }
+div.switcher-buttons button.uk-button.uk-button-default {
+    background-color: #990000;
+    color: white;
+}

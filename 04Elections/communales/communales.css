@@ -18,6 +18,10 @@ a {
     height: 60%;
 }
 
+.uk-card-body h3 {
+    text-align: center;
+}
+
 .cards:hover {
     opacity: 75%;
     transition: 500ms;

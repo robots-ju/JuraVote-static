@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
-body {
-    
-}
-
 .uk-heading-large {
     color: #990000 ;
     text-align: center;
@@ -142,8 +138,8 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
 }
 
 .illustration {
-    height: 150px;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .chevron-down {

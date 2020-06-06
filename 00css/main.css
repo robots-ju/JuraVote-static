@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
-.uk-heading-large {
+h1.uk-heading-large {
     color: #990000 ;
     text-align: center;
+    font-size: 3rem;
 }
 
 .text-rouge-fonce {

@@ -58,42 +58,92 @@
             <section class="page uk-width-expand@m" style="padding-left: 2%;">
                 <h2 class="uk-heading-large titre roboto">Actualités politiques</h2>
                 <hr>
-                <br>
-                <div uk-grid>
-                    <div class="uk-width-auto@m">
-                        <h2>Dernières actualités</h2>
-                        <hr>
-                        <ul class="uk-pagination" uk-margin>
-                            <li><a href="#"><span uk-pagination-previous></span></a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li class="uk-disabled"><span>...</span></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li class="uk-active"><span>7</span></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li><a href="#">10</a></li>
-                            <li class="uk-disabled"><span>...</span></li>
-                            <li><a href="#">20</a></li>
-                            <li><a href="#"><span uk-pagination-next></span></a></li>
-                        </ul>            
-                    </div>
-                    <div class="uk-panel uk-width-expand@m">
-                        <h2>Dernières actualités politiques</h2>
-                        <hr>
-                        <div class="uk-width-expand@m">
-                        
-                            <ul id="component-nav" class="uk-switcher">
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
-                            </ul>
+                    <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">11</a></li>
+                        <li><a href="#">12</a></li>
+                    </ul> 
                     
-                        </div>
-                    </div>                    
-                </div>
+                        <ul class="uk-switcher uk-margin">
+                            <li>
+                                <div class="uk-grid-small uk-grid-match uk-child-width-1-2" uk-grid>
+                                    <div>
+                                        <div class="uk-card uk-card-default">
+                                            <div class="uk-card-header">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <!--<img class="uk-border-circle" width="40" height="40" src="#">-->
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                            </div>
+                                            <!--<div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-card uk-card-default">
+                                            <div class="uk-card-header">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <!--<img class="uk-border-circle" width="40" height="40" src="#">-->
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h3 class="uk-card-title uk-margin-remove-bottom">Asemblée communale Develier</h3>
+                                                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-06T16:00">06 juin 2020</time></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-body">
+                                                <p>Une Assemblée communale est convoquée à Develier le lundi 15 juin 2020 à 19 h 30 à la halle de gymnastique de l'Ecole.</p>
+                                            </div>
+                                            <!--<div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-card uk-card-default">
+                                            <div class="uk-card-header">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <!--<img class="uk-border-circle" width="40" height="40" src="#">-->
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h3 class="uk-card-title uk-margin-remove-bottom">Démission au Parlement JU</h3>
+                                                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2020-06-06T16:00">06 juin 2020</time></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-body">
+                                                <p>Le député Frédéric Lovis (PCSI) a annoncé sa démission au 30 juin 2020.</p>
+                                            </div>
+                                            <!--<div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    
             </section>   
     </section>
 </main>

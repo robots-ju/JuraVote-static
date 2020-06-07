@@ -164,7 +164,7 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
 div.switcher-buttons button.uk-button.uk-button-default {
     background-color: #D20603;
     color: white;
-    border: 0px;
+    border: 0;
 }
 
 div.switcher-buttons button.uk-button.uk-button-default.uk-active {

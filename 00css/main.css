@@ -6,6 +6,10 @@ h1.uk-heading-large {
     font-size: 3rem;
 }
 
+h2 {
+    text-align: center;
+}
+
 .text-rouge-fonce {
     color:#990000;
 }

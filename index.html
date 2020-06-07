@@ -15,73 +15,80 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166072477-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-166072477-1');
     </script>
 </head>
 <body>
-    <header>
-        <div class="navbar-normal">
-            <iframe src="01Navigation/navbar.html?active=Accueil" id="navbar-iframe"></iframe>
+<header>
+    <div class="navbar-normal">
+        <iframe src="01Navigation/navbar.html?active=Accueil" id="navbar-iframe"></iframe>
+    </div>
+    <nav class="uk-navbar uk-navbar-container navbar-mobile">
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle uk-button uk-button-text" href="#menu-mobile" uk-toggle>
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+            </a>
         </div>
-        <nav class="uk-navbar uk-navbar-container navbar-mobile">
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle uk-button uk-button-text" href="#menu-mobile" uk-toggle>
-                    <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
-                </a>
-            </div>
-        </nav>
-        <div id="menu-mobile" uk-offcanvas>
-            <div class="uk-offcanvas-bar">
-                <button class="uk-offcanvas-close" type="button" uk-close></button>
-                <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
-                    <li id="Accueil">
-                        <a class="uk-button uk-button-text" href="./index.html">Accueil</a></li> 
-                    <li id="Votations">
-                        <a class="uk-button uk-button-text" href="./03Votations/accueilV.html">Prochaines votations</a></li>
-                    <li id="Resultats">
-                        <a class="uk-button uk-button-text" href="./05Resultats/resultats.html">Archives des résultats</a></li>
-                    <li id="Instances">
-                        <a class="uk-button uk-button-text" href="./07Instances/accueilI.html">Instances politiques</a></li>
-                    
-                    <li id="equipe">
-                        <a class="uk-button uk-button-text" href="./11Equipe/equipe.html">L'équipe</a></li>
-                    <li><a class="uk-button uk-button-tex" href="https://twitter.com/JuraVote/" target="_blank"
-                        uk-icon="icon: twitter; ratio: 1.2"></a></li>
-                    <li><a class="uk-button uk-button-tex" href="https://www.instagram.com/juravote/?hl=fr" target="_blank"
-                        uk-icon="icon: instagram; ratio: 1.2"></a></li>
-                    <li><a class="uk-button uk-button-tex" href="https://www.facebook.com/JuraVote2020/" target="_blank"
-                        uk-icon="icon: facebook; ratio: 1.2"></a></li>
-                </ul>
-            </div>
+    </nav>
+    <div id="menu-mobile" uk-offcanvas>
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
+                <li id="Accueil">
+                    <a class="uk-button uk-button-text" href="./index.html">Accueil</a></li>
+                <li id="Votations">
+                    <a class="uk-button uk-button-text" href="./03Votations/accueilV.html">Prochaines votations</a></li>
+                <li id="Resultats">
+                    <a class="uk-button uk-button-text" href="./05Resultats/resultats.html">Archives des résultats</a>
+                </li>
+                <li id="Instances">
+                    <a class="uk-button uk-button-text" href="./07Instances/accueilI.html">Instances politiques</a></li>
+
+                <li id="equipe">
+                    <a class="uk-button uk-button-text" href="./11Equipe/equipe.html">L'équipe</a></li>
+                <li><a class="uk-button uk-button-tex" href="https://twitter.com/JuraVote/" target="_blank"
+                       uk-icon="icon: twitter; ratio: 1.2"></a></li>
+                <li><a class="uk-button uk-button-tex" href="https://www.instagram.com/juravote/?hl=fr" target="_blank"
+                       uk-icon="icon: instagram; ratio: 1.2"></a></li>
+                <li><a class="uk-button uk-button-tex" href="https://www.facebook.com/JuraVote2020/" target="_blank"
+                       uk-icon="icon: facebook; ratio: 1.2"></a></li>
+            </ul>
         </div>
-    </header>
-    <main>
-        <section style="padding-left: 10%; padding-right: 10%; padding-top: 2%;">
-            <div class="uk-grid" uk-grid>
-                <section class="page uk-width-expand@m" style="padding-left: 2%;">
-                    <div class="uk-panel">
-                        <h2>Bienvenue sur Juravote !</h2>
+    </div>
+</header>
+<main>
+    <section style="padding-left: 10%; padding-right: 10%; padding-top: 2%;">
+        <div class="uk-grid" uk-grid>
+            <section class="page uk-width-expand@m" style="padding-left: 2%;">
+                <div class="uk-panel">
+                    <h1>Bienvenue sur Juravote !</h1>
+                    <hr>
+                    <p style="margin-bottom: 2%">Nous vous souhaitons une agréable visite et restons à disposition pour
+                        toute proposition ou question !</p>
+                </div>
+                <div class="uk-grid" uk-grid>
+                    <div class="uk-panel uk-width-1-2@l">
+                        <h2>Votations (Jura) 2020</h2>
                         <hr>
-                        <p>Nous vous souhaitons une agréable visite et restons à disposition pour toute proposition ou question !</p>
-                    </div> 
-                    <br>
-                    <br>
-                    <div uk-grid>
-                        <div class="uk-panel uk-width-large@m">
-                            <h2>Votations (Jura) 2020</h2>
-                            <hr>
-                            <div class="uk-alert-primary" uk-alert>
-                                <a class="uk-alert-close"></a>
-                                <p>Chaque carte est un lien qui vous amène vers les informations de l'événement !</p>
-                            </div>          
+                        <div class="uk-alert-primary" uk-alert>
+                            <a class="uk-alert-close"></a>
+                            <p>Chaque carte est un lien qui vous amène vers les informations de l'événement !</p>
+                        </div>
+                        <div class="uk-grid uk-grid-small uk-child-width1-1" uk-grid>
                             <div>
-                                <a href="03Votations/communales/HauteSorne.html"> 
+                                <a href="03Votations/communales/HauteSorne.html">
                                     <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
                                         <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">21 juin</div>
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">21
+                                                juin
+                                            </div>
                                         </div>
                                         <div class="uk-card-body">
                                             <p class="uk-card-title">Votations Haute-Sorne</p>
@@ -89,223 +96,167 @@
                                     </div>
                                 </a>
                             </div>
-                            <br>
                             <div>
                                 <a href="04Elections/communales/Lajoux.html">
                                     <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
                                         <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">05 juillet</div>
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">05
+                                                juillet
+                                            </div>
                                         </div>
                                         <div class="uk-card-body">
-                                        <p class="uk-card-title">Election Lajoux</p>
+                                            <p class="uk-card-title">Election Lajoux</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <br>
                             <div>
                                 <a href="03Votations/communales/Develier.html">
                                     <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
                                         <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">05 juillet</div>
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">05
+                                                juillet
+                                            </div>
                                         </div>
                                         <div class="uk-card-body">
-                                        <p class="uk-card-title">Votation Develier</p>
+                                            <p class="uk-card-title">Votation Develier</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <br>
                             <div>
                                 <a href="04Elections/communales/Beurnevesin.html">
                                     <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
                                         <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">19 juillet</div>
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">19
+                                                juillet
+                                            </div>
                                         </div>
                                         <div class="uk-card-body">
-                                        <p class="uk-card-title">Election Beurnevésin</p>
+                                            <p class="uk-card-title">Election Beurnevésin</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <br>
-                            <!--<div>
-                                <a href="04Elections/communales/Courtetelle.html">
-                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                        <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">23 août</div>
-                                        </div>
-                                        <br>
-                                        <div class="uk-card-body">
-                                        <p class="uk-card-title">Election Courtételle</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="03Votations/federales/federales.html">
-                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                        <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">27 septembre</div>
-                                        </div>
-                                        <div class="uk-card-body">
-                                        <p class="uk-card-title">Votations fédérales</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="03Votations/communales/Delemont.html">
-                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                        <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">27 septembre</div>
-                                        </div>
-                                        <div class="uk-card-body">
-                                        <p class="uk-card-title">Votation Delémont</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="04Elections/cantonales/cantonales.html">
-                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                        <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">18 octobre</div>
-                                        </div>
-                                        <div class="uk-card-body">
-                                        <p class="uk-card-title">Election cantonales JU</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="04Elections/cantonales/cantonales.html">
-                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                        <div class="uk-card-header">
-                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">08 novembre</div>
-                                        </div>
-                                        <div class="uk-card-body">
-                                        <p class="uk-card-title">Election cantonales JU</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <br>-->
                         </div>
-                        <div>
-                            <p></p>
-                            <p></p>
+                    </div>
+                    <div class="uk-panel uk-width-1-2@l">
+                        <h2>Assemblées communales (Jura) 2020</h2>
+                        <hr>
+                        <div class="uk-alert-primary" uk-alert>
+                            <a class="uk-alert-close"></a>
+                            <p>Chaque carte est un lien qui vous amène sur les sites des Communes !</p>
                         </div>
-                        <div class="uk-panel uk-width-expand@m">
-                            <h2>Assemblées communales (Jura) 2020</h2>
-                            <hr>
-                            <div class="uk-alert-primary" uk-alert>
-                                <a class="uk-alert-close"></a>
-                                <p>Chaque carte est un lien qui vous amène sur les sites des Communes !</p>
+                        <div class="uk-grid-small uk-grid-match uk-child-width-1-2@m" uk-grid>
+                            <div>
+                                <a href="https://www.develier.ch/fr/Vivre/Actualites/News/Assemblee-communale-13.html"
+                                   target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">15
+                                                juin
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Develier</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="uk-grid-small uk-grid-match uk-child-width-1-2" uk-grid>
-                                <div>
-                                    <a href="https://www.develier.ch/fr/Vivre/Actualites/News/Assemblee-communale-13.html" target="blank">
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">15 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Develier</p>
+                            <div>
+                                <a href="http://www.montfaucon.ch/scripts/Modules/News/listOne.aspx?idnews=121&idn=61"
+                                   target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">15
+                                                juin
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="http://www.montfaucon.ch/scripts/Modules/News/listOne.aspx?idnews=121&idn=61" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">15 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Montfaucon</p>
-                                            </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Montfaucon</p>
                                         </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="http://www.closdudoubs.ch/administration/autorites/assemblee-communale/" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">25 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Clos-du-Doubs</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="http://www.cornol.ch/fr/actualites/actualitescommunales/welcome.php?action=showinfo&info_id=958987&ls=0&sq=&kategorie_id=&date_from=&date_to=" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">25 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Cornol</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="http://www.courchapoix.ch/cpx/" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">29 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Courchapoix</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="https://ederswiler.ch/" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">29. Juni</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Ederswiler</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div> 
-                                <div>
-                                    <a href="https://mervelier.ch/" target="blank"> 
-                                        <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
-                                            <div class="uk-card-header">
-                                                <div class="uk-card-badge uk-label" style="background-color: #D20603;">29 juin</div>
-                                            </div>
-                                            <div class="uk-card-body">
-                                                <p class="uk-card-title">Mervelier</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>                    
+                            <div>
+                                <a href="http://www.closdudoubs.ch/administration/autorites/assemblee-communale/"
+                                   target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">25
+                                                juin
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Clos-du-Doubs</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://www.cornol.ch/fr/actualites/actualitescommunales/welcome.php?action=showinfo&info_id=958987&ls=0&sq=&kategorie_id=&date_from=&date_to="
+                                   target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">25
+                                                juin
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Cornol</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://www.courchapoix.ch/cpx/" target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">29
+                                                juin
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Courchapoix</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://ederswiler.ch/" target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">29.
+                                                Juni
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Ederswiler</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://mervelier.ch/" target="blank">
+                                    <div class="uk-card uk-card-hover uk-card-small" style="background-color: #F5F5F5;">
+                                        <div class="uk-card-header">
+                                            <div class="uk-card-badge uk-label" style="background-color: #D20603;">29
+                                                juin
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="uk-card-title">Mervelier</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </section>
-                <aside>
-                    <div class="uk-align-left" style="display:inline-block; width: 100%; height:max-content;">
-                        <span>
-                            <h2>Fil d'actualité Twitter</h2>
-                            <hr>
-                            <a class="twitter-timeline" data-lang="fr" data-height="700"
-                            href="https://twitter.com/JuraVote?ref_src=twsrc%5Etfw">Tweets by JuraVote</a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                        </span>
-                    </div>
-                </aside>
-            </div>
-        </section>
-    </main>  
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
 </body>
 <footer>
     <div class="footer">

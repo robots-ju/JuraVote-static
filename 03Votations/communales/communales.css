@@ -23,6 +23,10 @@ a {
     transition: 500ms;
 }
 
+.card-blank {
+    background: none;
+}
+
 .div_image {
     max-height: 300px;
     overflow: hidden;

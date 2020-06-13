@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
 h1.uk-heading-large {
-    color: #990000 ;
     text-align: center;
     font-size: 3rem;
+    font-family: Roboto, sans-serif;
+}
+
+h2 {
+    text-align: center;
 }
 
 .text-rouge-fonce {
@@ -160,7 +164,7 @@ nav.uk-navbar-container:not(.uk-navbar-transparent) {
 div.switcher-buttons button.uk-button.uk-button-default {
     background-color: #D20603;
     color: white;
-    border: 0px;
+    border: 0;
 }
 
 div.switcher-buttons button.uk-button.uk-button-default.uk-active {

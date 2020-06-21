@@ -92,8 +92,8 @@
                     </div>
                     <div class="uk-card-body uk-text-left">
                         <p><b>Objet : </b>Crédit de CHF 1'312'000.- nécessaire à l'assainissement du Centre de Culture et de Sport à Courfaivre</p>
-                        <p><b>Participation : </b>xx.xx %</p>
-                        <p><b>Résultat : </b>Accepté / refusé</p>
+                        <p><b>Participation : </b>37.40 %</p>
+                        <p><b>Résultat : </b>Accepté</p>
                         <p><b>Type de la votation : </b>Votation communale (Haute-Sorne)</p>
                         <p><b>Mode de votation : </b>Scrutin populaire</p>
                         <p><a href="CSCC_description.html">Lien vers la description du projet</a></p>
@@ -108,12 +108,7 @@
                         </div>
                     </div>
                     <section style="padding: 2%;">
-                        <div  uk-switcher="animation: uk-animation-fade; toggle: > *">
-                            <button class="uk-button uk-button-default" type="button">Graphique des résultats</button>
-                            <button class="uk-button uk-button-default" type="button">Liste des résultats</button>
-                        </div>                                
-                        <ul class="uk-switcher uk-margin">
-                            <li>                   
+                                     
                                 <div class="uk-card-body">
                                     <div id="chartdivFCB" style="width: 100%; height: 250px;"></div>
                                     <script>
@@ -123,10 +118,10 @@
                                         // Add data
                                         resultatFCB.data = [{
                                             "votes": "OUI",
-                                            "suffrages": 0
+                                            "suffrages": 1184
                                         }, {
                                             "votes": "NON",
-                                            "suffrages": 0
+                                            "suffrages": 786
                                         }];
 
                                         // Add and configure Series
@@ -154,60 +149,7 @@
                                         ]
                                     </script>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="uk-overflow-auto">    
-                                    <table class="uk-table uk-table-divider uk-table-striped uk-table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Village</th>
-                                                <th>Participation</th>
-                                                <th>Nombre de oui (en voix)</th>
-                                                <th>Nombre de oui (en %)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Bassecourt</td>
-                                                <td>xxxxx %</td>
-                                                <td>xxxxx</td>
-                                                <td>xxxxx %</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Courfaivre</td>
-                                                <td>xxxxx %</td>
-                                                <td>xxxxx</td>
-                                                <td>xxxxx %</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Glovelier</td>
-                                                <td>xxxxx %</td>
-                                                <td>xxxxx</td>
-                                                <td>xxxxx %</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Soulce</td>
-                                                <td>xxxxx %</td>
-                                                <td>xxxxx</td>
-                                                <td>xxxxx %</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Undervelier</td>
-                                                <td>xxxxx %</td>
-                                                <td>xxxxx</td>
-                                                <td>xxxxx %</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Totaux</b></td>
-                                                <td><b>xxxxx %</b></td>
-                                                <td><b>xxxxx</b></td>
-                                                <td><b>xxxxx %</b></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </li>
-                        </ul>
+                            
                     </section>
                 </div>
             </div>
@@ -231,151 +173,23 @@
                         </div>
                     </div>
                     <section style="padding: 2%;">
-                        <div id="chartdiv3" style="width: 100%; height: 350px; padding-top: 5%"></div>
-                            <script>
-                                var cantonJU = am4core.create("chartdiv3", am4maps.MapChart);
-                                cantonJU.geodata = am4geodata_switzerlandHigh;
-                                cantonJU.projection = new am4maps.projections.Miller();
-                                var polygonSeries = cantonJU.series.push(new am4maps.MapPolygonSeries());
-                                polygonSeries.useGeodata = true;
-                                polygonSeries.mapPolygons.template.events.on("hit", function (ev) {
-                                cantonJU.zoomToMapObject(evtarget);
-                                });
-                                var label = cantonJU.chartContainer.createChild(am4core.Label);
-                                polygonSeries.include = ["CH-JU"];
-                                polygonSeries.fill = am4core.color("#ffffff")
-                                
-                                cantonJU.legend = new am4maps.Legend();
-                                cantonJU.legend.position = "left";
-
-                                var imageSeries10to20 = cantonJU.series.push(new am4maps.MapImageSeries());
-                                var imageSeries10to20Template = imageSeries10to20.mapImages.template;
-                                var circle = imageSeries10to20Template.createChild(am4core.Circle);
-                                circle.radius = 8;                        
-                                circle.strokeWidth = 2;
-                                circle.nonScaling = true;
-                                circle.tooltipText = "{title} - {OUI}";
-                                circle.fill = am4core.color("#db0000");  
-
-                                imageSeries10to20.fill = am4core.color("#db0000")
-                                imageSeries10to20.name = "10 à 20 %";
-                                imageSeries10to20.value = "10 à 20 %";
-                                imageSeries10to20.title = "Oui en %";                                  
-
-                                imageSeries10to20Template.propertyFields.latitude = "latitude";
-                                imageSeries10to20Template.propertyFields.longitude = "longitude";                                    
-
-                                imageSeries10to20.data = [{
+                        <table class="uk-table uk-table-divider uk-table-striped uk-table-hover">
+                            <thead>
+                                <tr>
                                     
-                                }];
-
-                                var imageSeries20to30 = cantonJU.series.push(new am4maps.MapImageSeries());
-                                var imageSeries20to30Template = imageSeries20to30.mapImages.template;
-                                var circle = imageSeries20to30Template.createChild(am4core.Circle);
-                                circle.radius = 8;                        
-                                circle.strokeWidth = 2;
-                                circle.nonScaling = true;
-                                circle.tooltipText = "{title} - {OUI}";
-                                circle.fill = am4core.color("#ca2f2f");
-
-                                imageSeries20to30.fill = am4core.color("#e74545")
-                                imageSeries20to30.name = "20 à 30 %";
-                                imageSeries20to30.value = "20 à 30 %";
-                                imageSeries20to30.title = "Oui en %";
-
-                                imageSeries20to30Template.propertyFields.latitude = "latitude";
-                                imageSeries20to30Template.propertyFields.longitude = "longitude";                                    
-
-                                imageSeries20to30.data = [{
-                                    
-                                }];  
-
-                                var imageSeries30to40 = cantonJU.series.push(new am4maps.MapImageSeries());
-                                var imageSeries30to40Template = imageSeries30to40.mapImages.template;
-                                var circle = imageSeries30to40Template.createChild(am4core.Circle);
-                                circle.radius = 8;                        
-                                circle.strokeWidth = 2;
-                                circle.nonScaling = true;
-                                circle.tooltipText = "{title} - {OUI}";
-                                circle.fill = am4core.color("#e74545");
-
-                                imageSeries30to40.fill = am4core.color("#e74545")
-                                imageSeries30to40.name = "30 à 40 %";
-                                imageSeries30to40.value = "30 à 40 %";
-                                imageSeries30to40.title = "Oui en %";
-
-                                imageSeries30to40Template.propertyFields.latitude = "latitude";
-                                imageSeries30to40Template.propertyFields.longitude = "longitude";                                    
-
-                                imageSeries30to40.data = [{
-                                                                                            
-                                }];
-
-                                var imageSeries40to50 = cantonJU.series.push(new am4maps.MapImageSeries());
-                                var imageSeries40to50Template = imageSeries40to50.mapImages.template;
-                                var circle = imageSeries40to50Template.createChild(am4core.Circle);
-                                circle.radius = 8;                        
-                                circle.strokeWidth = 2;
-                                circle.nonScaling = true;
-                                circle.tooltipText = "{title} - {OUI}";
-                                circle.fill = am4core.color("#fd7272");
-
-                                imageSeries40to50.fill = am4core.color("#fd7272")
-                                imageSeries40to50.name = "40 à 50 %";
-                                imageSeries40to50.value = "40 à 50 %";
-                                imageSeries40to50.title = "Oui en %";
-
-                                imageSeries40to50Template.propertyFields.latitude = "latitude";
-                                imageSeries40to50Template.propertyFields.longitude = "longitude";                                    
-
-                                imageSeries40to50.data = [{
-                                    
-                                }];   
-                                        
-                                var imageSeries50to60 = cantonJU.series.push(new am4maps.MapImageSeries());
-                                var imageSeries50to60Template = imageSeries50to60.mapImages.template;
-                                var circle = imageSeries50to60Template.createChild(am4core.Circle);
-                                circle.radius = 8;                        
-                                circle.strokeWidth = 2;
-                                circle.nonScaling = true;
-                                circle.tooltipText = "{title} - {OUI}";
-                                circle.fill = am4core.color("#88e56f");
-                                
-                                imageSeries50to60.fill = am4core.color("#88e56f")
-                                imageSeries50to60.name = "50 à 60 %";
-                                imageSeries50to60.value = "50 à 60 %";
-                                imageSeries50to60.title = "Oui en %";
-
-                                imageSeries50to60Template.propertyFields.latitude = "latitude";
-                                imageSeries50to60Template.propertyFields.longitude = "longitude";                                    
-
-                                imageSeries50to60.data = [{                                                                                                                         
-                                    "latitude": 47.3388888888,
-                                    "longitude": 7.2458333333,
-                                    "title": "Bassecourt",
-                                    "OUI": "xxxxx %"
-                                },{                                                                                                                         
-                                    "latitude": 47.3361111111,
-                                    "longitude": 7.2833333333,
-                                    "title": "Courfaivre",
-                                    "OUI": "xxxxx %"
-                                },{                                                                                                                         
-                                    "latitude": 47.3347222222,
-                                    "longitude": 7.2041666666,
-                                    "title": "Glovelier",
-                                    "OUI": "xxxxx %"
-                                },{                                                                                                                         
-                                    "latitude": 47.305,
-                                    "longitude": 7.2716666666,
-                                    "title": "Soulce",
-                                    "OUI": "xxxxx %"
-                                },{                                                                                                                         
-                                    "latitude": 47.3041666666,
-                                    "longitude": 7.225,
-                                    "title": "Undervelier",
-                                    "OUI": "xxxxx %"
-                                }];
-                            </script>
+                                    <th>Participation</th>
+                                    <th>Nombre de oui (en voix)</th>
+                                    <th>Nombre de oui (en %)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>37.40 %</b></td>
+                                    <td><b>1184</b></td>
+                                    <td><b>60.10 %</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
                 </div>
             </div>

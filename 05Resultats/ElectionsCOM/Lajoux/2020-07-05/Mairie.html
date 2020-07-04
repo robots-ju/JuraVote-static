@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../../../img/Logo/JuraVote/Icon.png"/> <!-- Mettre le bon chemin vers le fichier -->
+    <title>JuraVote | Votation communale du 21.06.2020</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../00css/normalize.css"> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../../../00css/uikit.min.css"/> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../../../00js/uikit.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <script src="../../../../00js/uikit-icons.min.js"></script> <!-- Mettre le bon chemin vers le fichier -->
+    <link rel="stylesheet" href="../../../../00css/main.css">
+    <link rel="stylesheet" href="../../../resultats.css">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/switzerlandHigh.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <!-- Mettre les styles CSS personnalisés -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166072477-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166072477-1');
+    </script>
+</head>
+<body>
+<!-- Barre de navigation -->
+<header>
+    <div class="navbar-normal">
+        <iframe src="../../../../01Navigation/navbar.html?active=Resultats" id="navbar-iframe"></iframe>
+    </div>
+    <nav class="uk-navbar uk-navbar-container navbar-mobile">
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle uk-button uk-button-text" href="#menu-mobile" uk-toggle>
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+            </a>
+        </div>
+    </nav>
+    <div id="menu-mobile" uk-offcanvas>
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default uk-list uk-list-divider">
+                <li id="Accueil">
+                    <a class="uk-button uk-button-text" href="../../../../index.html">Accueil</a></li>
+                <li id="Votations">
+                    <a class="uk-button uk-button-text" href="../../../../03Votations/accueilV.html">Prochaines votations</a>
+                </li>
+                
+                <li id="Resultats">
+                    <a class="uk-button uk-button-text" href="../../../../05Resultats/resultats.html">Archives des résultats</a>
+                </li>
+                
+                <li id="Instances">
+                    <a class="uk-button uk-button-text" href="../../../../07Instances/accueilI.html">Instances politiques</a>
+                </li>
+                <li id="Actualites">
+
+                    <a class="uk-button uk-button-text" href="../../../../09Actualites/Actualites.html">Actualit&eacute;s politiques</a>
+
+                </li>
+                <li id="equipe">
+                    <a class="uk-button uk-button-text" href="../../../../11Equipe/equipe.html">L'équipe</a></li>
+                <li><a class="uk-button uk-button-tex" href="https://twitter.com/JuraVote/" target="_blank"
+                       uk-icon="icon: twitter; ratio: 1.2"></a></li>
+                <li><a class="uk-button uk-button-tex" href="https://www.instagram.com/juravote/?hl=fr" target="_blank"
+                       uk-icon="icon: instagram; ratio: 1.2"></a></li>
+                <li><a class="uk-button uk-button-tex" href="https://www.facebook.com/JuraVote2020/" target="_blank"
+                       uk-icon="icon: facebook; ratio: 1.2"></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <section style="padding: 2%">
+        <h1 class="uk-heading-large">Résultats de l'élection communale du 05 juillet
+            2020</h1>
+        <hr>
+        <div class="uk-child-width-1-2@m uk-child-width-1-1@s uk-grid-small uk-grid-match" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-column uk-align-left" uk-grid>
+                            <h2>Informations de la votation</h2>
+                        </div>
+                    </div>
+                    <div class="uk-card-body uk-text-left">
+                        <p><b>Objet : </b>Élection à la mairie</p>
+                        <p><b>Participation : </b>xxxxx %</p>
+                        <p><b>Résultat : </b>Xxxxxx</p>
+                        <p><b>Type de l'élection : </b>Élection communale</p>
+                        <p><b>Mode d'élection : </b>Élection complémentaire</p>
+                        <p><a href="Mairie_description.html">Lien vers les informations d'élection</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-column uk-align-left" uk-grid>
+                            <h2>Résultats communaux</h2>
+                        </div>
+                    </div>
+                    <section style="padding: 2%;">
+                        <li>
+                            <div class="uk-card-body">
+                                <div id="chartdivMairie" style="width: 100%; height: 250px;"></div>
+                                    <script>
+                                        // Create chart instance
+                                        var resultatMairie = am4core.create("chartdivMairie", am4charts.XYChart);
+
+                                        // Add data
+                                        resultatMairie.data = [{
+                                            "candidat": "Pierre Lexample",
+                                            "suffrages": 3
+                                        }, {
+                                            "candidat": "Paul Lexample",
+                                            "suffrages": 2
+                                        }, {
+                                            "candidat": "Jean Lexample",
+                                            "suffrages": 4
+                                        }, {
+                                            "candidat": "Cunégon Lexample",
+                                            "suffrages": 3.1415926535897932384626433832795028841971693993751058209749445923078164
+                                        }];
+
+                                        // Add and configure Series
+                                        var dataMairie = resultatMairie.xAxes.push(new am4charts.CategoryAxis());
+                                        dataMairie.dataFields.category = "candidat";
+                                        dataMairie.title.text="Candidats";
+                                        var valueMairie = resultatMairie.yAxes.push(new am4charts.ValueAxis());
+                                        valueMairie.title.text="Suffrages";
+                                        valueMairie.min=0;
+                                        var seriesMairie = resultatMairie.series.push(new am4charts.ColumnSeries());
+                                        seriesMairie.name="Voies";
+                                        seriesMairie.columns.template.tooltipText="Candidat: {categoryX}\nSuffrages: {valueY}";
+                                        seriesMairie.columns.template.fill = am4core.color("#D20603");
+                                        seriesMairie.dataFields.valueY="suffrages";
+                                        seriesMairie.dataFields.categoryX="candidat";
+                                        
+                                    </script>
+                                </div>
+                            </li>
+                            
+                    </section>
+                </div>
+            </div>
+        </section>
+</main>
+<footer>
+    <div class="footer">
+        <iframe src="../../../../00Footer/footer.html?active=Accueil" id="footer-iframe"></iframe>
+    </div>
+</footer>
+</body>
+</html>

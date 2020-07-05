@@ -127,13 +127,12 @@
                                             "suffrages": 4
                                         }, {
                                             "candidat": "Cunégon Lexample",
-                                            "suffrages": 3.1415926535897932384626433832795028841971693993751058209749445923078164
+                                            "suffrages": 3
                                         }];
 
                                         // Add and configure Series
                                         var dataMairie = resultatMairie.xAxes.push(new am4charts.CategoryAxis());
                                         dataMairie.dataFields.category = "candidat";
-                                        dataMairie.title.text="Candidats";
                                         var valueMairie = resultatMairie.yAxes.push(new am4charts.ValueAxis());
                                         valueMairie.title.text="Suffrages";
                                         valueMairie.min=0;
